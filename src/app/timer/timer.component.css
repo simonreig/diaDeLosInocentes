@@ -1,0 +1,11 @@
+#orangeReddit {
+    background: rgba(255, 69, 0, 255);
+    border-radius: 100px;
+    border-color: rgba(255, 69, 0, 255);
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+    cursor: default;
+    font-size: 50px;
+    color: white;
+}

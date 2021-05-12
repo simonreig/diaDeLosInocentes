@@ -1,0 +1,37 @@
+img {
+    width: 60px;
+}
+
+form {
+    padding: 15px;
+    width: 1000px;
+}
+
+#flex {
+    display: flex;
+}
+
+#btnLogin {
+    height: 40px;
+    margin-top: 30px;
+}
+
+#error {
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+#timer {
+    margin-top: 80px;
+}
+
+#pointerOf {
+    cursor: default;
+}
+
+.estadistica {
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 10px;
+    width: 500px;
+}

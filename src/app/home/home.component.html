@@ -1,0 +1,45 @@
+<div class="container">
+
+    <!-- Título con logo -->
+    <div class="text-center">
+        <br>
+        <h1 class="display-3" class="">April fools day <img src="/assets/reddit-logo-16.png" alt="redit_logo"></h1>
+        <hr>
+    </div>
+
+    <!-- Formulario/Usuario -->
+
+    <form #f="ngForm" (ngSubmit)="login(f)" class="form" id="flex" *ngIf="!nombreLocalStr">
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" required>
+            <label class="text-danger" *ngIf="f.submitted && f.controls['nombre'].errors">El nombre es necesario</label>
+        </div>
+        <div class="mb-3" style="margin-left: 30px;">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="email" required>
+            <label class="text-danger" *ngIf="f.submitted && f.controls['email'].errors">El email es necesario</label>
+        </div>
+        <button type="submit" id="btnLogin" style="margin-left: 50px;" class="btn btn-primary">Submit</button>
+        <label class="text-danger" id="error" *ngIf="f.submitted && mismoEmail">Error, ya participaste con ese Email</label>
+    </form>
+
+    <div *ngIf="nombreLocalStr">
+        <h1>Hola, {{nombre}}! <button type="button" class="btn btn-outline-danger" (click)="logout()">Cerrar Sesión</button></h1>
+        <h3>Tu botón es:</h3>
+
+        <div *ngIf="voto">
+            <button type="button" id="pointerOf" disabled [ngClass]="btnColor">{{btnName}}</button>
+        </div>
+    </div>
+
+
+
+    <div class="text-center" id="timer">
+        <app-timer></app-timer>
+    </div>
+</div>
+
+<div class="estadistica">
+    <app-estadisticas></app-estadisticas>
+</div>
